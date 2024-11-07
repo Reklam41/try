@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="slider.css" />
+    <title>Carousel</title>
+  </head>
+
+  <style>
+    body {
+      background-color: black;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    .slider {
+      display: none;
+      height: 250px;
+      margin: auto;
+      position: relative;
+      width: 90%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    /*.slider {
+      height: 250px;
+      margin: auto;
+      position: relative;
+      width: 90%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }*/
+
+    .slider-track {
+      display: flex;
+      width: calc(250px * 18);
+      animation: scroll 40s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-250px * 9));
+      }
+    }
+
+    .slide {
+      width: 250px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      perspective: 100px;
+    }
+
+    img {
+      width: 100%;
+      transition: 1s;
+      filter: saturate(0);
+    }
+
+    img:hover {
+      transform: translateZ(20px);
+      filter: saturate(1);
+    }
+
+    /*     gradient shadows */
+
+    .slider::before,
+    .slider::after {
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 15%;
+      z-index: 2;
+    }
+
+    .slider::before {
+      top: 0;
+      left: 0;
+    }
+    .slider::after {
+      top: 0;
+      right: 0;
+      transform: rotateZ(180deg);
+    }
+  </style>
+
+  <body>
+    <div class="slider">
+      <div class="slider-track">
+        <!--9 slides-->
+
+        <div class="slide">
+          <img src="https://picsum.photos/id/1001/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1002/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1003/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1004/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1005/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1006/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1000/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1008/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1009/200/300" alt="random image" />
+        </div>
+
+        <!-- same as above -->
+
+        <div class="slide">
+          <img src="https://picsum.photos/id/1001/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1002/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1003/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1004/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1005/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1006/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1000/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1008/200/300" alt="random image" />
+        </div>
+        <div class="slide">
+          <img src="https://picsum.photos/id/1009/200/300" alt="random image" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
