@@ -15,6 +15,7 @@ main {
 }
 
 .slideshow-container {
+  background-color: black;
   display: flex;
   gap: 10px; /* Add desired gap in pixels */
   width: calc(250px * 10 + 10px * 9); /* Adjust width to account for gaps */
