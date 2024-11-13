@@ -16,78 +16,97 @@ main {
 
 .slideshow-container {
   display: flex;
-  width: calc(
-    600px * 10
-  ); /* Width should match the total width of all slides */
+  gap: 10px; /* Add desired gap in pixels */
+  width: calc(250px * 10 + 10px * 9); /* Adjust width to account for gaps */
   animation: scroll 30s linear infinite;
 }
 
-.slideshow-container .slide {
-  flex-shrink: 0;
-  width: 600px;
-  height: 600px;
+.slide1,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  width: 250px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-size: 2rem;
-  background-color: #88f;
+  perspective: 1000px;
 }
 
 .slideshow-container .slide1 {
   background-color: #8f8;
-  width: 500px;
-  height: 800px;
+
   background: url(books/BOOK\ COVER\ HISTORY\ OF\ ART\ [Recovered].jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: saturate(0);
+}
+
+.slide1:hover {
+  transform: translateZ(20px);
+  filter: saturate(1);
 }
 
 .slideshow-container .slide2 {
   background-color: #f88;
-  width: 500px;
-  height: 800px;
+
   background: url(books/yose.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: saturate(0);
+}
+
+.slide2:hover {
+  transform: translateZ(20px);
+  filter: saturate(1);
 }
 
 .slideshow-container .slide3 {
   background-color: #888;
-  width: 500px;
-  height: 800px;
+
   background: url(books/Screenshot\ 2024-11-13\ 140222.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: saturate(0);
+}
+
+.slide3:hover {
+  transform: translateZ(20px);
+  filter: saturate(1);
 }
 
 .slideshow-container .slide4 {
   background-color: #f88;
 
-  width: 500px;
-
-  height: 800px;
-
-  background: url(books/8dac7dbbd3459e66b6ccf16ec106e082.jpg);
+  background: url(books/yeet.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: saturate(0);
+}
+
+.slide4:hover {
+  transform: translateZ(20px);
+  filter: saturate(1);
 }
 
 .slideshow-container .slide5 {
-  background-color: #888;
-
-  width: 500px;
-
-  height: 800px;
+  background-color: #f88;
 
   background: url(books/e348831994111b27cd102cbcbbe5230d.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: saturate(0);
+}
+
+.slide5:hover {
+  transform: translateZ(20px);
+  filter: saturate(1);
 }
 
 /* Smooth infinite scroll animation */
@@ -97,6 +116,21 @@ main {
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+.active-slide {
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
