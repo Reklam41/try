@@ -1,11 +1,113 @@
 body {
-  /*background-color: black;*/
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
   display: grid;
+  height: 100vh;
   place-items: center;
+  overflow: hidden;
 }
 
-.logo {
+main {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.slideshow-container {
+  display: flex;
+  width: calc(
+    600px * 10
+  ); /* Width should match the total width of all slides */
+  animation: scroll 30s linear infinite;
+}
+
+.slideshow-container .slide {
+  flex-shrink: 0;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  background-color: #88f;
+}
+
+.slideshow-container .slide1 {
+  background-color: #8f8;
+  width: 500px;
+  height: 800px;
+  background: url(books/BOOK\ COVER\ HISTORY\ OF\ ART\ [Recovered].jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slideshow-container .slide2 {
+  background-color: #f88;
+  width: 500px;
+  height: 800px;
+  background: url(books/yose.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slideshow-container .slide3 {
+  background-color: #888;
+  width: 500px;
+  height: 800px;
+  background: url(books/Screenshot\ 2024-11-13\ 140222.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slideshow-container .slide4 {
+  background-color: #f88;
+
+  width: 500px;
+
+  height: 800px;
+
+  background: url(books/8dac7dbbd3459e66b6ccf16ec106e082.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slideshow-container .slide5 {
+  background-color: #888;
+
+  width: 500px;
+
+  height: 800px;
+
+  background: url(books/e348831994111b27cd102cbcbbe5230d.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Smooth infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* body { */
+/*background-color: black;*/
+/* min-height: 100vh;
+  display: grid;
+  place-items: center;
+} */
+
+/* .logo {
   font-size: 2.5rem;
   font-weight: bold;
   color: black;
@@ -21,7 +123,7 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
-}
+} */
 
 /*.slider {
     height: 250px;
@@ -33,7 +135,7 @@ body {
     overflow: hidden;
   }*/
 
-.slider-track {
+/* .slider-track {
   display: flex;
   width: calc(250px * 18);
   animation: scroll 40s linear infinite;
@@ -66,11 +168,11 @@ img {
 img:hover {
   transform: translateZ(20px);
   filter: saturate(1);
-}
+} */
 
 /*     gradient shadows */
 
-.slider::before,
+/* .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
@@ -92,4 +194,4 @@ img:hover {
   top: 0;
   right: 0;
   transform: rotateZ(180deg);
-}
+} */
