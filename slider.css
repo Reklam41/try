@@ -12,6 +12,7 @@ main {
   width: 100vw;
   overflow: hidden;
   background-color: #f1f1f1;
+  margin-top: 200px;
 }
 
 .slideshow-container {
