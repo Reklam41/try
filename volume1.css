@@ -21,8 +21,8 @@ body {
 }
 
 .book-container {
-  width: 500px;
-  height: 800px;
+  width: 792px;
+  height: 1120px;
   position: relative;
   margin: 50px auto;
   transform-style: preserve-3d;
@@ -54,7 +54,7 @@ body {
   background: #1a4ba5;
   color: white;
   transform: rotateY(0deg) translateZ(25px);
-  background: url(books/BOOK\ COVER\ HISTORY\ OF\ ART\ [Recovered].jpg);
+  background: url(volume1/volume1-cover.jpg);
   background-size: cover;
   background-position: center;
   /*display: flex;
@@ -70,7 +70,7 @@ body {
   background: #123a87;
   color: white;
   transform: rotateY(180deg) translateZ(25px);
-  background: url(books/Screenshot\ 2024-11-13\ 140222.png);
+  background: url(volume1/volume1-back.jpg);
   background-size: cover;
   background-position: center;
   /*display: flex;
@@ -81,13 +81,15 @@ body {
 }
 
 .book-spine {
-  width: 50px;
+  width: 70px;
   height: 100%;
-  background: #0d2b66;
+  background: url(volume1/volume1-spine.jpg);
   color: white;
   transform: rotateY(-90deg) translateZ(25px);
   transform-origin: 100%;
   display: flex;
+  background-size: cover;
+  background-position: center;
   /*justify-content: center;
     align-items: center;
     writing-mode: vertical-rl;
