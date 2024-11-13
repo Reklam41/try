@@ -1,47 +1,95 @@
-body {
-  background-color: #fff;
-  color: #000;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
-  background-color: pink;
+body {
+  margin: 0;
   display: flex;
   justify-content: center;
-  place-items: center;
-  gap: 10px;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  perspective: 1000px;
 }
 
-.front {
-  background-color: orangered;
-  width: 600px;
+.book-container {
+  width: 500px;
   height: 800px;
-  background: url(books/BOOK\ COVER\ HISTORY\ OF\ ART\ [Recovered].jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  margin: 50px auto;
+  transform-style: preserve-3d;
 }
 
-.spine {
-  background-color: yellow;
-  height: 800px;
-  width: 150px;
+.book {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  cursor: pointer;
 }
 
-.back {
-  background-color: green;
-  width: 210px;
-  height: 300px;
-  background: url(books/BOOK\ COVER\ HISTORY\ OF\ ART\ [Recovered].jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.book-cover,
+.book-back,
+.book-spine {
+  position: absolute;
+  background: #fff;
+  /*padding: 20px;
+    box-sizing: border-box;
+    border-radius: 2px;*/
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.footer {
-  background-color: #215251;
+.book-cover {
+  width: 100%;
+  height: 100%;
+  background: #1a4ba5;
   color: white;
-  text-align: center;
+  transform: rotateY(0deg) translateZ(25px);
+  background: url(books/BOOK\ COVER\ HISTORY\ OF\ ART\ [Recovered].jpg);
+  background-size: cover;
+  background-position: center;
+  /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;*/
+}
+
+.book-back {
+  width: 100%;
+  height: 100%;
+  background: #123a87;
+  color: white;
+  transform: rotateY(180deg) translateZ(25px);
+  background: url(books/Screenshot\ 2024-11-13\ 140222.png);
+  background-size: cover;
+  background-position: center;
+  /*display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;*/
+}
+
+.book-spine {
+  width: 50px;
+  height: 100%;
+  background: #0d2b66;
+  color: white;
+  transform: rotateY(-90deg) translateZ(25px);
+  transform-origin: 100%;
+  display: flex;
+  /*justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;*/
 }
