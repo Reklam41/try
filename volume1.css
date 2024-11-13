@@ -2,12 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -58,11 +52,6 @@ body {
   background: url(volume1/volume1-cover.jpg);
   background-size: cover;
   background-position: center;
-  /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;*/
 }
 
 .book-back {
@@ -74,11 +63,6 @@ body {
   background: url(volume1/volume1-back.jpg);
   background-size: cover;
   background-position: center;
-  /*display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;*/
 }
 
 .book-spine {
