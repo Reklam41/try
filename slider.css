@@ -2,17 +2,54 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: #215251;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main {
   display: grid;
   height: 100vh;
   place-items: center;
   overflow: hidden;
 }
 
-main {
-  width: 100vw;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  margin-top: 200px;
+.name a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a {
+  cursor: pointer;
+  color: #0a0a23;
+  font-size: 28px;
+  padding: 0.5rem 1rem;
+  transition: color 0.25s;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  border-radius: 10px;
+}
+nav a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: white;
+  scale: 1 0;
+  z-index: -1;
+  transition: 0.45s;
+  border-radius: 10px;
+}
+nav a:hover {
+  color: black;
+}
+nav a:hover::after {
+  scale: 1 1;
 }
 
 .slideshow-container {
@@ -170,7 +207,7 @@ main {
     overflow: hidden;
   }*/
 
-.slider-track {
+/* .slider-track {
   display: flex;
   width: calc(250px * 18);
   animation: scroll 40s linear infinite;
@@ -207,7 +244,7 @@ img:hover {
 
 /*     gradient shadows */
 
-.slider::before,
+/* .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
@@ -229,7 +266,7 @@ img:hover {
   top: 0;
   right: 0;
   transform: rotateZ(180deg);
-}
+}  */
 
 /* .slider-track {
   display: flex;
