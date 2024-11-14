@@ -187,6 +187,11 @@ nav a:hover::after {
   bottom: 0;
   width: 100%;
   background-color: #215251;
-  color: white;
   text-align: center;
+}
+
+.last {
+  color: transparent;
+  background: linear-gradient(135deg, #fdd780 0%, #d1522f 50%, #d8552f 100%);
+  -webkit-background-clip: text;
 }
