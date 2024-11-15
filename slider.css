@@ -6,11 +6,78 @@ body {
   overflow: hidden;
 }
 
-header {
-  background-color: #215251;
+/* header {
+   background-color: #215251;
   display: flex;
   justify-content: space-around;
+  align-items: center; 
+} */
+
+.off-screen-menu {
+  background-color: rgba(34, 37, 49);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 3s ease;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+nav {
+  background-color: rgba(34, 37, 49);
+  padding: 1rem;
+  display: flex;
+}
+
+.nav-bar {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+
+.nav-bar span {
+  height: 5px;
+  width: 100%;
+  background-color: #cd9d2b;
+  border-radius: 25px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  transition: 3s ease;
+}
+
+.nav-bar span:nth-child(1) {
+  top: 25%;
+}
+
+.nav-bar span:nth-child(3) {
+  top: 75%;
+}
+
+.nav-bar.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.nav-bar.active span:nth-child(2) {
+  top: 50%;
+  opacity: 0;
+}
+.nav-bar.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .main {
