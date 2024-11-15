@@ -14,6 +14,21 @@ body {
   perspective: 1000px;
 }
 
+.obelisk {
+  width: 50px; /* Set the base width */
+  height: 300px; /* Set the height of the main rectangle */
+  background: #d8f6f9; /* Background color */
+  clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0% 90%,
+    0% 10%
+  ); /* Create pointed top and tapered edges */
+  border: 1px solid #bce3e6; /* Optional: Border to define edges */
+}
+
 .book-container {
   width: 554px; /* 70% of 792px */
   height: 784px; /* 70% of 1120px */
