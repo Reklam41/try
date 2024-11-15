@@ -15,8 +15,8 @@ body {
 }
 
 .obelisk {
-  width: 50px; /* Set the base width */
-  height: 300px; /* Set the height of the main rectangle */
+  width: 63px; /* Set the base width */
+  height: 570px; /* Set the height of the main rectangle */
   background: #d8f6f9; /* Background color */
   clip-path: polygon(
     50% 0%,
@@ -26,7 +26,6 @@ body {
     0% 90%,
     0% 10%
   ); /* Create pointed top and tapered edges */
-  border: 1px solid #bce3e6; /* Optional: Border to define edges */
 }
 
 .book-container {
