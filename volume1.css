@@ -6,12 +6,141 @@
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: #f0f0f0;
   perspective: 1000px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 127px;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.5rem 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: #cd9d2b;
+      scale: 1 0;
+      z-index: -1;
+      transition: 0.45s;
+      border-radius: 10px;
+    }
+
+    &:hover {
+      color: white;
+    }
+    &:hover::after {
+      scale: 1 1;
+    }
+  }
+}
+.off-screen-menu.active {
+  right: -200px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo {
+  width: 106px;
+  height: 145px;
+  background-color: #cd9d2b;
+  background-image: url(volume1/volume1-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 63px;
+  left: 78px;
+}
+
+/* Ensure nav container is set to position relative or absolute */
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* Add this */
+}
+
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  margin-left: auto;
+  position: absolute; /* Change to absolute */
+  top: 50%; /* Vertically center the hamburger */
+  right: 20px; /* Align it to the right of the container */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+}
+
+.ham-menu span {
+  height: 4px;
+  width: 100%;
+  background-color: #cd9d2b;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%; /* Horizontally center the bars */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  transition: 0.3s ease;
+}
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span {
+  background-color: #cd9d2b;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .book-container {
