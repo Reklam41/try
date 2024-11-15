@@ -95,6 +95,8 @@ nav a:hover::after {
 .slide1:hover {
   transform: translateZ(20px);
   filter: saturate(1);
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .slideshow-container .slide2 {
