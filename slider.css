@@ -19,18 +19,35 @@ body {
   width: 100%;
   max-width: 450px;
   position: fixed;
-  top: 0;
+  top: 127px;
   right: -450px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 3rem;
+  font-size: 1.2rem;
   transition: 0.3s ease;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.5rem 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: white;
+      background-color: #cd9d2b;
+    }
+  }
 }
 .off-screen-menu.active {
-  right: 0;
+  right: -200px;
 }
 
 /* ham menu */
@@ -39,6 +56,8 @@ body {
   width: 40px;
   margin-left: auto;
   position: relative;
+  right: 78px;
+  top: 63px;
 }
 .ham-menu span {
   height: 5px;
