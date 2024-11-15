@@ -1,7 +1,8 @@
-const navBar = document.querySelector(".nav-bar");
+const hamMenu = document.querySelector(".ham-menu");
+
 const offScreenMenu = document.querySelector(".off-screen-menu");
 
-navBar.addEventListener("click", () => {
-  navBar.classList.toggle("active");
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
 });

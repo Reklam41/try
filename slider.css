@@ -13,8 +13,8 @@ body {
   align-items: center; 
 } */
 
+/* off-screen-menu */
 .off-screen-menu {
-  background-color: rgba(34, 37, 49);
   height: 100vh;
   width: 100%;
   max-width: 450px;
@@ -23,61 +23,53 @@ body {
   right: -450px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: 3rem;
-  transition: 3s ease;
+  transition: 0.3s ease;
 }
-
 .off-screen-menu.active {
   right: 0;
 }
 
-nav {
-  background-color: rgba(34, 37, 49);
-  padding: 1rem;
-  display: flex;
-}
-
-.nav-bar {
+/* ham menu */
+.ham-menu {
   height: 50px;
-  width: 50px;
+  width: 40px;
   margin-left: auto;
   position: relative;
 }
-
-.nav-bar span {
+.ham-menu span {
   height: 5px;
   width: 100%;
   background-color: #cd9d2b;
   border-radius: 25px;
   position: absolute;
-  top: 50px;
-  left: 50px;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  transition: 3s ease;
+  transition: 0.3s ease;
 }
-
-.nav-bar span:nth-child(1) {
+.ham-menu span:nth-child(1) {
   top: 25%;
 }
-
-.nav-bar span:nth-child(3) {
+.ham-menu span:nth-child(3) {
   top: 75%;
 }
-
-.nav-bar.active span:nth-child(1) {
+.ham-menu.active span {
+  background-color: #cd9d2b;
+}
+.ham-menu.active span:nth-child(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.nav-bar.active span:nth-child(2) {
-  top: 50%;
+.ham-menu.active span:nth-child(2) {
   opacity: 0;
 }
-.nav-bar.active span:nth-child(3) {
+.ham-menu.active span:nth-child(3) {
   top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .main {
@@ -249,18 +241,4 @@ nav a:hover::after {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #215251;
-  text-align: center;
-}
-
-.last {
-  color: transparent;
-  background: linear-gradient(135deg, #fdd780 0%, #d1522f 50%, #d8552f 100%);
-  -webkit-background-clip: text;
 }
