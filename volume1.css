@@ -7,8 +7,9 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f0f0f0;
+
   perspective: 1000px;
+  overflow: hidden;
 }
 
 .main {
@@ -93,31 +94,24 @@ nav {
   left: 78px;
 }
 
-/* Ensure nav container is set to position relative or absolute */
-nav {
-  display: flex;
-  justify-content: space-between;
-  position: relative; /* Add this */
-}
-
+/* ham menu */
 .ham-menu {
   height: 50px;
   width: 40px;
   margin-left: auto;
-  position: absolute; /* Change to absolute */
-  top: 50%; /* Vertically center the hamburger */
-  right: 20px; /* Align it to the right of the container */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+  position: absolute;
+  right: 78px;
+  top: 63px;
 }
-
 .ham-menu span {
   height: 4px;
   width: 100%;
   background-color: #cd9d2b;
   border-radius: 25px;
   position: absolute;
-  left: 50%; /* Horizontally center the bars */
-  transform: translateX(-50%); /* Adjust for perfect centering */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   transition: 0.3s ease;
 }
 .ham-menu span:nth-child(1) {
@@ -126,11 +120,9 @@ nav {
 .ham-menu span:nth-child(3) {
   top: 75%;
 }
-
 .ham-menu.active span {
   background-color: #cd9d2b;
 }
-
 .ham-menu.active span:nth-child(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -144,8 +136,8 @@ nav {
 }
 
 .book-container {
-  width: 554px; /* 70% of 792px */
-  height: 784px; /* 70% of 1120px */
+  width: 462px;
+  height: 647px;
   position: relative;
   margin: 50px auto;
   transform-style: preserve-3d;
@@ -181,6 +173,8 @@ nav {
   background: url(volume1/volume1-cover.jpg);
   background-size: cover;
   background-position: center;
+  margin-right: 100px; /* Add margin to create space from border */
+  border-right: 2px solid #cd9d2b;
 }
 
 .book-back {
@@ -195,9 +189,11 @@ nav {
 }
 
 .book-spine {
-  width: 115px; /* 70% of 165px */
+  width: 80px; /* 70% of 165px */
   height: 100%;
   transform: rotateY(-90deg) translateZ(17.5px); /* 70% of 25px */
   transform-origin: 100%;
   background: url(volume1/volume1-spine.jpg);
+  background-size: cover;
+  background-position: center;
 }
