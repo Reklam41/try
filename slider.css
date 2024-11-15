@@ -70,6 +70,17 @@ body {
   right: -200px;
 }
 
+/* logo */
+.logo {
+  width: 106px;
+  height: 145px;
+  background-color: #cd9d2b;
+  background-image: url(volume1/volume1-logo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* ham menu */
 .ham-menu {
   height: 50px;
@@ -132,34 +143,6 @@ body {
   }
 }
 
-/* nav a {
-  cursor: pointer;
-  color: white;
-  font-size: 28px;
-  padding: 0.5rem 1rem;
-  transition: color 0.25s;
-  position: relative;
-  text-decoration: none;
-  z-index: 1;
-  border-radius: 10px;
-}
-nav a::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  background: linear-gradient(135deg, #fdd780 0%, #d1522f 50%, #d8552f 100%);
-  scale: 1 0;
-  z-index: -1;
-  transition: 0.45s;
-  border-radius: 10px;
-}
-nav a:hover {
-  color: black;
-}
-nav a:hover::after {
-  scale: 1 1;
-}
- */
 .slideshow-container {
   display: flex;
   gap: 10px; /* Add desired gap in pixels */
@@ -281,3 +264,32 @@ nav a:hover::after {
     transform: scale(1);
   }
 }
+
+/* nav a {
+  cursor: pointer;
+  color: white;
+  font-size: 28px;
+  padding: 0.5rem 1rem;
+  transition: color 0.25s;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  border-radius: 10px;
+}
+nav a::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(135deg, #fdd780 0%, #d1522f 50%, #d8552f 100%);
+  scale: 1 0;
+  z-index: -1;
+  transition: 0.45s;
+  border-radius: 10px;
+}
+nav a:hover {
+  color: black;
+}
+nav a:hover::after {
+  scale: 1 1;
+}
+ */
