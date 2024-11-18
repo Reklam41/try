@@ -184,8 +184,8 @@ nav {
 .slide1:hover {
   transform: translateZ(20px);
   filter: saturate(1);
-  transform: scale(1.1);
-  transition: transform 0.5s ease-in-out;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in;
 }
 
 .slideshow-container .slide2 {
@@ -201,6 +201,8 @@ nav {
 .slide2:hover {
   transform: translateZ(20px);
   filter: saturate(1);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in;
 }
 
 .slideshow-container .slide3 {
@@ -216,6 +218,8 @@ nav {
 .slide3:hover {
   transform: translateZ(20px);
   filter: saturate(1);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in;
 }
 
 .slideshow-container .slide4 {
@@ -231,6 +235,8 @@ nav {
 .slide4:hover {
   transform: translateZ(20px);
   filter: saturate(1);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in;
 }
 
 .slideshow-container .slide5 {
@@ -246,6 +252,8 @@ nav {
 .slide5:hover {
   transform: translateZ(20px);
   filter: saturate(1);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in;
 }
 
 /* Smooth infinite scroll animation */
